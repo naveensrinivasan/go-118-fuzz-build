@@ -98,8 +98,8 @@ func main() {
 	defer os.Remove(mainFile.Name())
 
 	type Data struct {
-		PkgPath string
-		Func    string
+		PkgPath      string
+		Func         string
 		Declarations string
 		FuzzerParams string
 	}
@@ -128,7 +128,7 @@ func main() {
 	args = append(args, buildFlags...)
 	args = append(args, mainFile.Name())
 	cmd := exec.Command("go", args...)
-	//cmd := exec.Command("gotip", args...)
+	// cmd := exec.Command("gotip", args...)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 
@@ -148,7 +148,7 @@ import (
 	"testing"
 	"unsafe"
 	target {{printf "%q" .PkgPath}}
-	"github.com/AdamKorcz/go-118-fuzz-build/utils"
+	"github.com/naveensrinivasan/go-118-fuzz-build/utils"
 )
 
 // #include <stdint.h>

@@ -8,13 +8,12 @@ import (
 	"go/parser"
 	"go/printer"
 	"go/token"
-	"golang.org/x/tools/go/ast/astutil"
 	"os"
+
+	"golang.org/x/tools/go/ast/astutil"
 )
 
-var (
-	fuzzerPath = flag.String("path", "", "path to fuzzer")
-)
+var fuzzerPath = flag.String("path", "", "path to fuzzer")
 
 func isFlagSet(name string) bool {
 	found := false
@@ -28,9 +27,9 @@ func isFlagSet(name string) bool {
 
 func addImport(astFile *ast.File, fset *token.FileSet, addTestingtypes bool) {
 	if addTestingtypes {
-		astutil.AddImport(fset, astFile, "github.com/AdamKorcz/go-118-fuzz-build/testingtypes")
+		astutil.AddImport(fset, astFile, "github.com/naveensrinivasan/go-118-fuzz-build/testingtypes")
 	}
-	astutil.AddNamedImport(fset, astFile, "go118fuzzbuildutils", "github.com/AdamKorcz/go-118-fuzz-build/utils")
+	astutil.AddNamedImport(fset, astFile, "go118fuzzbuildutils", "github.com/naveensrinivasan/go-118-fuzz-build/utils")
 }
 
 func getStringVersion(start, end token.Pos, src []byte) string {
@@ -58,13 +57,12 @@ func main() {
 
 	addImport(f, fset, addTestingtypes)
 
-
 	buf := new(bytes.Buffer)
 	err = printer.Fprint(buf, fset, f)
 	if err != nil {
 		panic(err)
 	}
-	//fmt.Println(buf.String())
+	// fmt.Println(buf.String())
 
 	err = os.Remove(*fuzzerPath)
 	if err != nil {
@@ -81,5 +79,4 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-
 }
