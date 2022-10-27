@@ -1,5 +1,7 @@
 github.com/AdaLogics/go-fuzz-headers v0.0.0-20220824214621-3c06a36a6952 h1:cs1LC1MGKD1O4neR89Rc24t0u15Vs5ASfUQ2tLr/KbY=
 github.com/AdaLogics/go-fuzz-headers v0.0.0-20220824214621-3c06a36a6952/go.mod h1:i9fr2JpcEcY/IHEvzCM3qXUZYOQHgR89dt4es1CgMhc=
+github.com/AdaLogics/go-fuzz-headers v0.0.0-20221007124625-37f5449ff7df h1:kDJd/7926nFt3yQeX/o3D/LMoJmlmYKe5AdC3uDGOm4=
+github.com/AdaLogics/go-fuzz-headers v0.0.0-20221007124625-37f5449ff7df/go.mod h1:i9fr2JpcEcY/IHEvzCM3qXUZYOQHgR89dt4es1CgMhc=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=
 github.com/cyphar/filepath-securejoin v0.2.3 h1:YX6ebbZCZP7VkM3scTTokDgBL2TY741X51MTk3ycuNI=
 github.com/cyphar/filepath-securejoin v0.2.3/go.mod h1:aPGpWjXOXUn2NCNjFvBE6aRxGGx79pTxQpKOJNYHHl4=
