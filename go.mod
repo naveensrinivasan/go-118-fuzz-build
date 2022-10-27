@@ -1,6 +1,6 @@
 module github.com/AdamKorcz/go-118-fuzz-build
 
-go 1.18
+go 1.19
 
 require (
 	github.com/AdaLogics/go-fuzz-headers v0.0.0-20220824214621-3c06a36a6952
